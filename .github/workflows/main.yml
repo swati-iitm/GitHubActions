@@ -1,9 +1,19 @@
-Nested mappings are not allowed in compact mappings (4:13)
-  2 |   test:
-  3 |     steps:
-> 4 |       name: 23ds3000185@ds.study.iitm.ac.in
-    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 5 |         run: echo "Hello, world!"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 6 |
-    | ^
+name: hello-world-example
+on:
+  push:
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: 23ds3000185@ds.study.iitm.ac.in
+        run: echo "Hello world!"
+      -
+        name: Do stuff
+        run: |
+          echo "Step 1..."
+          echo "Step 2..."
+          echo "Step 3..."
+      -
+        name: Say Goodbye
+        run: echo "Goodbye!"
