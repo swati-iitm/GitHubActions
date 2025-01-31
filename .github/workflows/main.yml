@@ -1,5 +1,9 @@
-jobs:
-  test:
-    steps:
-      - name: 23ds3000185@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+Nested mappings are not allowed in compact mappings (4:13)
+  2 |   test:
+  3 |     steps:
+> 4 |       name: 23ds3000185@ds.study.iitm.ac.in
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 5 |         run: echo "Hello, world!"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 6 |
+    | ^
